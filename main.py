@@ -52,7 +52,7 @@ watermark_image = None
 # Create the file dialog box
 def open_file_dialog():
     global image_path, loaded_image
-    image_path = filedialog.askopenfilename(filetypes=[("Image Files", "*.png;*.jpg;*.jpeg")])
+    image_path = filedialog.askopenfilename(multiple=True, filetypes=[("Image Files", "*.png;*.jpg;*.jpeg")])
     if image_path:
         import_image(image_path)
 
